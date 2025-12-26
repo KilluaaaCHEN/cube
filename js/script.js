@@ -56,62 +56,112 @@ function collectFormulas() {
     });
 }
 
-function reverseFormula(formula) {
-    // 1. 先删除所有空格
-    let noSpaces = formula.replace(/\s+/g, '');
+function reverseMove(move) {
+    const base = move[0];
+    const suffix = move.slice(1);
 
-    // 2. 分割公式为独立的标记（包括字母代码和括号）
-    const codePattern = /([a-zA-Z](?:'|2)?|[\(\)])/g;
-    const codes = [];
-    let match;
+    if (suffix === "'") return base;
+    if (suffix === '2') return base + '2';
+    return base + "'";
+}
 
-    codePattern.lastIndex = 0;
-    while ((match = codePattern.exec(noSpaces)) !== null) {
-        codes.push(match[0]);
+// 把字符串拆成 token：字母手法 / 括号 / 数字
+function tokenize(formula) {
+    const tokens = [];
+    const regex = /([a-zA-Z](?:'|2)?|\(|\)|\d+)/g;
+    let m;
+    while ((m = regex.exec(formula.replace(/\s+/g, ''))) !== null) {
+        tokens.push(m[0]);
     }
+    return tokens;
+}
 
-    // 3. 反转顺序并处理字母代码（不处理括号）
-    const reversedCodes = [];
-    for (let i = codes.length - 1; i >= 0; i--) {
-        const code = codes[i];
+// 处理一个 token 序列，允许识别 ()2 结构
+function reverseTokens(tokens) {
+    // 先做一个扫描，把 ()2 变成一个块
+    const blocks = [];
+    for (let i = 0; i < tokens.length; i++) {
+        const t = tokens[i];
 
-        // 如果是括号，保持原样
-        if (code === '(' || code === ')') {
-            reversedCodes.push(code);
+        if (t === '(') {
+            // 找到匹配的 )
+            let depth = 1;
+            let j = i + 1;
+            for (; j < tokens.length; j++) {
+                if (tokens[j] === '(') depth++;
+                else if (tokens[j] === ')') depth--;
+                if (depth === 0) break;
+            }
+            const inner = tokens.slice(i + 1, j); // 括号内部
+            let repeat = 1;
+
+            // 如果后面紧跟数字 2 / 3 等，认为是整体重复
+            if (tokens[j + 1] && /^\d+$/.test(tokens[j + 1])) {
+                repeat = parseInt(tokens[j + 1], 10);
+                i = j + 1;
+            } else {
+                i = j;
+            }
+
+            blocks.push({
+                type: 'group',
+                repeat,
+                inner
+            });
+        } else if (t === ')' || /^\d+$/.test(t)) {
+            // ) 或单独数字在正常语法下不会出现在这里，忽略
             continue;
-        }
-
-        // 如果是字母代码，处理逆时针标记
-        const base = code[0]; // 基础字母
-        const suffix = code.slice(1); // 后缀部分
-
-        let reversedCode;
-
-        if (suffix === "'") {
-            reversedCode = base; // 去掉'
-        } else if (suffix === '2') {
-            reversedCode = base + '2'; // 保持2
         } else {
-            reversedCode = base + "'"; // 加上'
+            // 普通 move
+            blocks.push({
+                type: 'move',
+                move: t
+            });
         }
-
-        reversedCodes.push(reversedCode);
     }
 
-    // 4. 用空格连接所有标记
-    let result = reversedCodes.join(' ');
+    // 反向 block 列表，并对每个 block 取逆
+    const reversedBlocks = [];
+    for (let i = blocks.length - 1; i >= 0; i--) {
+        const b = blocks[i];
+        if (b.type === 'move') {
+            reversedBlocks.push({
+                type: 'move',
+                move: reverseMove(b.move)
+            });
+        } else if (b.type === 'group') {
+            // 对 group 内部递归取逆
+            const innerReversed = reverseTokens(b.inner);
+            reversedBlocks.push({
+                type: 'group',
+                repeat: b.repeat,
+                inner: innerReversed
+            });
+        }
+    }
 
-    // 5. 处理括号交换（保持你的原有逻辑）
-    result = result
-        .replace(/\(/g, 'right') // 交换括号
-        .replace(/\)/g, 'left')
-        .replace(/right/g, ')') // 交换括号
-        .replace(/left/g, '(');
+    // 把 block 重新拼回字符串
+    const out = [];
+    for (const b of reversedBlocks) {
+        if (b.type === 'move') {
+            out.push(b.move);
+        } else {
+            // group
+            out.push('(' + b.inner.join(' ') + ')');
+            if (b.repeat > 1) out.push(String(b.repeat));
+        }
+    }
 
-    // 6. 处理括号空格问题
-    // (右边不要有空格，)左边不要有空格，仅限第一个空格
-    result = result.replace(/\s*\)/g, ')'); // )左边不要有空格
-    result = result.replace(/\(\s*/g, '('); // (右边不要有空格
+    return out;
+}
+
+function reverseFormula(formula) {
+    const tokens = tokenize(formula);
+    const reversedTokens = reverseTokens(tokens);
+    let result = reversedTokens.join(' ');
+
+    // 删掉重复次数前面的空格，例如 ") 2" -> ")2"
+    result = result.replace(/\)\s+(\d+)/g, ')$1');
 
     return result;
 }
