@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>CFOP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <!-- jQuery（放在 Bootstrap JS 之前）-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+        <a class="navbar-brand" href="#">CFOP</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCFOP" aria-controls="navbarCFOP"
+                aria-expanded="false" aria-label="切换导航">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCFOP">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">P2L</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="oll.html">OLL</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="pll.html">PLL</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 主体内容 -->
+<div class="container mb-5">
+    <h1 class="h3 mb-4 text-center">F2L 前两层 41 种情况汇总</h1>
+
+    <!-- 第1组 -->
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <strong>第 1 组 简版 CFOP 里面的七个 PLL 公式</strong>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-bordered align-middle mb-0">
+                <tbody>
+                <tr class="text-center">
+                    <td><img src="./img/U1.gif" class="img-fluid" alt=""></td>
+                    <td><img src="./img/U.gif" class="img-fluid" alt=""></td>
+                    <td><img src="./img/H.gif" class="img-fluid" alt=""></td>
+                    <td><img src="./img/Z.gif" class="img-fluid" alt=""></td>
+                </tr>
+                <tr class="ollalg">
+                    <td>1-1) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U' R) U (R U R U') (R' U' R2)&scheme=custom&stage=PLL&view=playback"
+                            target="_blank">(R U' R) U (R U R U') (R' U' R2)</a></td>
+                    <td>1-2) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R2' U)(R U R' U')(R' U')(R' U R')&scheme=custom&stage=PLL&view=playback"
+                            target="_blank">(R2' U)(R U R' U')<br>(R' U')(R' U R')</a></td>
+                    <td>1-3) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=M2 U M2 U2 M2 U M2&scheme=custom&stage=PLL&view=playback"
+                            target="_blank">M2 U M2 U2 M2 U M2</a></td>
+                    <td>1-4) <a href="http://www.rubik.com.cn/alg/?type=alg&alg=(M2 U M2 U) (M' U2) (M2 U2)
+(M' U2)&scheme=custom&stage=PLL&view=playback" target="_blank">(M2 U M2 U) (M上 U2) (M2 U2)<br>(M上 U2)</a></td>
+                </tr>
+                <tr class="text-center">
+                    <td>概率 1/18</td>
+                    <td>概率 1/18</td>
+                    <td>概率 1/72</td>
+                    <td>概率 1/36</td>
+                </tr>
+                <tr class="text-center">
+                    <td><img src="./img/A1.gif" class="img-fluid" alt=""></td>
+                    <td><img src="./img/A.gif" class="img-fluid" alt=""></td>
+                    <td><img src="./img/E.gif" class="img-fluid" alt=""></td>
+                    <td></td>
+                </tr>
+                <tr class="ollalg">
+                    <td>1-5) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=x' R2 D2 (R' U' R) D2 (R' U R') x&scheme=custom&stage=PLL&view=playback"
+                            target="_blank">x' R2 D2 (R' U' R) D2 (R' U R') x</a></td>
+                    <td>1-6) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=x'(R U'R) D2 (R' U R) D2 R2 x&scheme=custom&stage=PLL&view=playback"
+                            target="_blank">x'(R U'R) D2 (R' U R) D2 R2 x</a></td>
+                    <td>1-7) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R2 U R' U') y (R U R' U')2 (R U R') y' (R U' R2)&scheme=custom&stage=PLL&view=playback"
+                            target="_blank">(R2 U R' U') y<br>(R U R' U')2 (R U R')<br>y' (R U' R2)</a></td>
+                    <td></td>
+                </tr>
+                <tr class="text-center">
+                    <td>概率 1/18</td>
+                    <td>概率 1/18</td>
+                    <td>概率 1/36</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 第2组 -->
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <strong>第2组 8个关键的PLL公式</strong>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-bordered align-middle mb-0">
+                <tbody>
+                <tr class="text-center">
+                    <td><img src="./img/T.gif" class="img-fluid" alt=""></td>
+                    <td><img src="./img/J.gif" class="img-fluid" alt=""></td>
+                    <td><img src="./img/J1.gif" class="img-fluid" alt=""></td>
+                    <td><img src="./img/Y.gif" class="img-fluid" alt=""></td>
+                </tr>
+                <tr class="ollalg">
+                    <td>2-1) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U R' U')(R' F R2 U' R' U')(R U R' F')&scheme=custom&stage=PLL&view=playback"
+                            target="_blank">(R U R' U')<br>(R' F R2 U' R' U')<br>(R U R' F')</a></td>
+                    <td>2-2) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U R'F')(R U R'U')(R'F R2 U'R'U')&scheme=custom&stage=PLL&view=playback"
+                            target="_blank">(R U R'F')<br>(R U R'U')<br>(R'F R2 U'R'U')</a></td>
+                    <td>2-3) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=z(U' R D')(R2 U R' U') (R2 U) D R'&scheme=custom&stage=PLL&view=playback&setup=z"
+                            target="_blank">z(U' R D')(R2 U R' U')<br>(R2 U) D R'</a></td>
+                    <td>2-4) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=F(R U'R' U')(R U R' F')(R U R' U')(R' F R F')&scheme=custom&stage=PLL&view=playback"
+                            target="_blank">F(R U'R' U')<br>(R U R' F')<br>(R U R' U')(R' F R F')</a></td>
+                </tr>
+                <tr class="text-center">
+                    <td>概率 1/18</td>
+                    <td>概率 1/18</td>
+                    <td>概率 1/18</td>
+                    <td>概率 1/18</td>
+                </tr>
+                <tr class="text-center">
+                    <td><img src="./img/F.gif" class="img-fluid" alt=""></td>
+                    <td><img src="./img/V.gif" class="img-fluid" alt=""></td>
+                    <td><img src="./img/R1.gif" class="img-fluid" alt=""></td>
+                    <td><img src="./img/R.gif" class="img-fluid" alt=""></td>
+                </tr>
+                <tr class="ollalg">
+                    <td>2-5) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U'(R'U R U') R2' b' x (R' U R) y'(R U R' U' R2)&scheme=custom&stage=PLL&view=playback&setup=x"
+                            target="_blank">U' (R'U R U') R2' b' x<br>(R' U R) y'<br>(R U R' U' R2)</a></td>
+                    <td>2-6) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R' U R' d') (R' F') (R2 U' R' U)(R' F R F)&scheme=custom&stage=PLL&view=playback&setup=y"
+                            target="_blank">(R' U R' d') (R' F')<br>(R2 U' R' U)<br>(R' F R F)</a></td>
+                    <td>2-7) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U'U')(R' U2)(R B' R' U')(R U R B) R2' U&scheme=custom&stage=PLL&view=playback"
+                            target="_blank">(R U'U')(R' U2)<br>(R B' R' U')<br>(R U R B) R2' U</a></td>
+                    <td>2-8) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R' U2)(R U'U')(R' F R U R' U')(R' F' R2 U')&scheme=custom&stage=PLL&view=playback"
+                            target="_blank">(R' U2)(R U'U')<br>(R' F R U R' U')<br>(R' F' R2 U')</a></td>
+                </tr>
+                <tr class="text-center">
+                    <td>概率 1/18</td>
+                    <td>概率 1/18</td>
+                    <td>概率 1/18</td>
+                    <td>概率 1/18</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 第3组 -->
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <strong>第 3 组 最后 6 个较难的 PLL 公式</strong>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-bordered align-middle mb-0">
+                <tbody>
+                <tr class="text-center">
+                    <td><img src="./img/N1.gif" class="img-fluid" alt=""></td>
+                    <td><img src="./img/N.gif" class="img-fluid" alt=""></td>
+                    <td><img src="./img/G1.gif" class="img-fluid" alt=""></td>
+                    <td><img src="./img/G.gif" class="img-fluid" alt=""></td>
+                </tr>
+                <tr class="ollalg">
+                    <td>3-1) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=z(R' U R')z'(R U2 L' U R')z(U R')z'(R U2 L' U R')&scheme=custom&stage=PLL&view=playback"
+                            target="_blank">z (R' U R') z'<br>(R U2 L' U R') z (U R')<br>z' (R U2 L' U R')</a></td>
+                    <td>3-2) <a href="http://www.rubik.com.cn/alg/?type=alg&alg=z(U'R D')(R2 U R'U')z'(R U R')
+z(R2 U R') D R'&scheme=custom&stage=PLL&view=playback&setup=z" target="_blank">z (U'R D')(R2 U R'U') z' (R U R')<br>z
+                        (R2 U R') D R'</a></td>
+                    <td>3-3) <a href="http://www.rubik.com.cn/alg/?type=alg&alg=(R2' u') (R U' R) U (R' u R2')
+y (R U'R')&scheme=custom&stage=PLL&view=playback&setup=y" target="_blank">(R2' u') (R U' R) U (R' u R2')<br>y (R
+                        U'R')</a></td>
+                    <td>3-4) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U R') y'(R2' u') (R U' R' U)(R' u R2)&scheme=custom&stage=PLL&view=playback&setup=y-"
+                            target="_blank">(R U R') y'(R2' u') (R U' R' U)(R' u R2)</a></td>
+                </tr>
+                <tr class="text-center">
+                    <td>概率 1/72</td>
+                    <td>概率 1/72</td>
+                    <td>概率 1/18</td>
+                    <td>概率 1/18</td>
+                </tr>
+                <tr class="text-center">
+                    <td><img src="./img/G3.gif" class="img-fluid" alt=""></td>
+                    <td><img src="./img/G2.gif" class="img-fluid" alt=""></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="ollalg">
+                    <td>3-5) <a href="http://www.rubik.com.cn/alg/?type=alg&alg=(R2' u R') (U R' U') (R u' R2')
+y' (R' U R)&scheme=custom&stage=PLL&view=playback&setup=y-" target="_blank">(R2' u R') (U R' U') (R u' R2')<br>y' (R' U
+                        R)</a></td>
+                    <td>3-6) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R' d' F)(R2' u R') U (R U' R) u' R2&scheme=custom&stage=PLL&view=playback&setup=y"
+                            target="_blank">(R' d' F)(R2' u R') U (R U' R) u' R2</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="text-center">
+                    <td>概率 1/18</td>
+                    <td>概率 1/18</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
