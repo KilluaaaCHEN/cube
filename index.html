@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>CFOP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <!-- jQuery（放在 Bootstrap JS 之前）-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+        <a class="navbar-brand" href="#">CFOP</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCFOP" aria-controls="navbarCFOP"
+                aria-expanded="false" aria-label="切换导航">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCFOP">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="">P2L</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">OLL</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">PLL</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 主体内容 -->
+<div class="container mb-5">
+    <h1 class="h3 mb-4 text-center">F2L 前两层 41 种情况汇总</h1>
+
+    <!-- 第1组 -->
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <strong>第1组 四种基本情况</strong>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-bordered align-middle mb-0">
+                <tbody>
+                <tr class="text-center">
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l40.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l25.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l34.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l31.gif" alt=""></td>
+                </tr>
+                <tr class="text-center">
+                    <td>
+                        1) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=R_U_R-  &scheme=custom&stage=F2L&view=playback"
+                            target="_blank">(R U R')</a>
+                    </td>
+                    <td>
+                        2) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=F-_U-_F&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">F' U' F</a>
+                    </td>
+                    <td>
+                        3) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=F R' F' R&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">F R' F' R</a>
+                    </td>
+                    <td>
+                        4) <a href="http://www.rubik.com.cn/alg/?type=alg&alg=U R
+						U'R'&scheme=custom&stage=F2L&view=playback"
+                              target="_blank">U R U'R'</a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 第2组 -->
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <strong>第2组 六种情况可转化为 1 和 2 基本情况</strong>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-bordered align-middle mb-0">
+                <tbody>
+                <tr class="text-center">
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l39.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l38.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l41.gif" alt=""></td>
+                    <td></td>
+                </tr>
+                <tr class="text-center">
+                    <td>
+                        5) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U'(R U R' U)(R U R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank"><u>U</u>'(R U R' U)(R U R')</a><br>
+                        <small>右后槽为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=R' U R2 U R'&scheme=custom&stage=L6E&view=playback"
+                           target="_blank">R' U R2 U R'</a><br>
+                        <small>左前为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=(F U F') (R U R')&scheme=custom&stage=ELS&view=playback"
+                           target="_blank">(F U F')(R U R')</a>
+                    </td>
+                    <td>
+                        6) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=d (R' U2 R) d' (R U R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">d (R' U2 R) d' (R U R')</a><br>
+                        <small>右后槽为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=R' U2 R2  U
+						R'&scheme=custom&stage=L6E&view=playback"
+                           target="_blank">R' U2 R2 U R'</a>
+                    </td>
+                    <td>
+                        7) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U'(R U'R'U)(R U R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank"><u>U</u>'(R <u>U</u>'R'U)(R U R')</a><br>
+                        <small>左前为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=(F U' F') (R U R')&scheme=custom&stage=ELS&view=playback"
+                           target="_blank">(F U' F') (R U R')</a>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr class="text-center">
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l26.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l27.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l24.gif" alt=""></td>
+                    <td></td>
+                </tr>
+                <tr class="text-center">
+                    <td>
+                        8) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U y' (R'U'R U')(R'U'R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">U y' (R'<u>U</u>'R U')(R'<u>U</u>'R)</a><br>
+                        <small>右后槽为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=(R' U' R) (F' U' F)&scheme=custom&stage=L6E&view=playback"
+                           target="_blank">(R' U' R)(F' U' F)</a><br>
+                        <small>左前为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=F U' F2' U' F&scheme=custom&stage=ELS&view=playback"
+                           target="_blank">F U' F2' U' F</a>
+                    </td>
+                    <td>
+                        9) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U' (R U2' R') d (R' U' R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">U' (R U2' R') d (R' U' R)</a><br>
+                        <small>左前为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=F U2 F2' U' F&scheme=custom&stage=ELS&view=playback"
+                           target="_blank">F U2 F2' U' F</a>
+                    </td>
+                    <td>
+                        10) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=d(R'U R U')(R'U'R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">d(R'U R U')(R'<u>U</u>'R)</a><br>
+                        <small>右后槽为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=(R' U R)(F' U' F)&scheme=custom&stage=L6E&view=playback"
+                           target="_blank">(R' U R)(F' U' F)</a>
+                    </td>
+                    <td></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 第3组 -->
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <strong>第3组 四种情况可以转化为 3、4 种基本情况</strong>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-bordered align-middle mb-0">
+                <tbody>
+                <tr class="text-center">
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l29.gif" alt=""></td>
+                    <td>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=(U' R U R') U2 (R U' R')&scheme=custom&stage=F2L&view=playback"
+                           target="_blank">
+                            <img src="http://www.rubik.com.cn/image/cfop/f2l30.gif" alt="">
+                        </a>
+                    </td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l36.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l35.gif" alt=""></td>
+                </tr>
+                <tr class="text-center">
+                    <td>
+                        11) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U' (R U2' R') U2 (R U' R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">U' (R U2' R') U2 (R U' R')</a><br>
+                        <small>左前为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=F U2 F' (U R   U'R')&scheme=custom&stage=ELS&view=playback"
+                           target="_blank">F U2 F' (U R U'R')</a>
+                    </td>
+                    <td>
+                        12) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(U' R U R') U2 (R U' R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">(U' R U R') U2 (R U' R')</a><br>
+                        <small>左前为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=F U F' U R  			  U'R'&scheme=custom&stage=ELS&view=playback"
+                           target="_blank">F U F' U R U'R'</a>
+                    </td>
+                    <td>
+                        13) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=d (R' U2 R) U2' (R' U R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">d (R' U2 R) U2' (R' U R)</a><br>
+                        <small>右后为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=(R' U2 R) y' U'(R'U R) &scheme=custom&stage=L6E&view=playback&setup=y-"
+                           target="_blank">(R' U2 R) y' <u>U</u>'(R'U R)</a>
+                    </td>
+                    <td>
+                        14) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=d (R' U' R) U2' (R' U R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">d (R' U' R) U2' (R' U R)</a><br>
+                        <small>右后为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=(R' U' R) y'U'(R'U R)&scheme=custom&stage=L6E&view=playback&setup=y-"
+                           target="_blank">(R' U' R) y'<u>U</u>'(R'U R)</a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 第4组 -->
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <strong>第4组 四种情况：角棱都在顶层并分开，角块白色朝上</strong>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-bordered align-middle mb-0">
+                <tbody>
+                <tr class="text-center">
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l15.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l20.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l19.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l16.gif" alt=""></td>
+                </tr>
+                <tr class="text-center">
+                    <td>
+                        🔶15) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=y' U' (R' U2 R) U' (R' U R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">y' U' (R' U2 R) U' (R' U R)</a>
+                    </td>
+                    <td>
+                        🔶16) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U R U2 R2' (F R F')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">U R U2 R2' (F R F')</a><br>
+                        <small>最后变成第 4 种基本情况，用</small>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=R' F R F'&scheme=custom&stage=F2L&view=playback"
+                           target="_blank">R' F R F'</a> 插入。<br>
+                        或 <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U (R U2 R') U (R U' R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">U (R U2 R') U (R U' R')</a>
+                    </td>
+                    <td>
+                        🔶17) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U2 (R U R' U)(R U' R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">U2 (R U R' U)(R U' R')</a><br>
+                        或 <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U' R') U2 (R U R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">(R U' R') U2 (R U R')</a><br>
+                        <small>后一种就是视频里说的“近端异色”处理</small>
+                    </td>
+                    <td>
+                        🔶18) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=y' U2 (R' U' R U') (R' U R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">y' U2 (R' U' R U') (R' U R)</a><br>
+                        或 <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=y' (R' U R) U2 (R' U' R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">y' (R' U R) U2 (R' U' R)</a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 第5组 -->
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <strong>第5组 两种“远切回接孩子放学”的情况和空槽应用</strong>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-bordered align-middle mb-0">
+                <tbody>
+                <tr class="text-center">
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l2.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l2_1.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l2_2.gif" alt=""></td>
+                    <td></td>
+                </tr>
+                <tr class="text-center">
+                    <td>
+                        19) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U (R U' R') U' (F' U F)  &scheme=custom&stage=F2L&view=playback"
+                            target="_blank">U (R U' R') U' (F' U F)</a>
+                    </td>
+                    <td>
+                        19') <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=F r U r' F'&scheme=custom&stage=ELS&view=playback"
+                            target="_blank">F r U r' F'</a><br>
+                        或 <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U' D F' U F D'&scheme=custom&stage=ELS&view=playback"
+                            target="_blank">U' D F' U F D'</a>
+                    </td>
+                    <td>
+                        19'') <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U' D' F' U F D &scheme=custom&stage=L6E&view=playback"
+                            target="_blank">U' D' F' U F D</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr class="text-center">
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l3.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l3_1.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l3_2.gif" alt=""></td>
+                    <td></td>
+                </tr>
+                <tr class="text-center">
+                    <td>
+                        20) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U' (F' U F) U (R U' R') &scheme=custom&stage=F2L&view=playback"
+                            target="_blank">U' (F' U F) U (R U' R')</a>
+                    </td>
+                    <td>
+                        20') <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U D R U' R' D'&scheme=custom&stage=ELS&view=playback"
+                            target="_blank">U D R U' R' D'</a>
+                    </td>
+                    <td>
+                        20'') <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U D' R U' R' D &scheme=custom&stage=L6E&view=playback"
+                            target="_blank">U D' R U' R' D</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 第6组 -->
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <strong>第6组 四种情况：棱块在第二层，角块在顶层且白色朝侧面</strong>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-bordered align-middle mb-0">
+                <tbody>
+                <tr class="text-center">
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l33.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l23.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l32.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l22.gif" alt=""></td>
+                </tr>
+                <tr class="text-center">
+                    <td>
+                        21) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=d (R' U' R) d' (R U R') &scheme=custom&stage=F2L&view=playback"
+                            target="_blank">d (R' U' R) d'(R U R')</a>
+                    </td>
+                    <td>
+                        22) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(U' R U R') d (R' U' R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">(U' R U R') d (R' U' R)</a>
+                    </td>
+                    <td>
+                        23) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U' (R U2' R') U (R U R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">U' (R U2' R') U (R U R')</a><br>
+                        或 <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=d (R' U R) U2 (R' U R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">d (R' U R) U2 (R' U R)</a>
+                    </td>
+                    <td>
+                        24) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(U' R U' R') U2 (R U' R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">(U' R U' R') U2 (R U' R')</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-center">上面两种情况角棱侧面红绿异色，处理方法类似。</td>
+                    <td colspan="2" class="text-center">上面两种情况角棱侧面同色，处理方法类似。</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 第7组 -->
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <strong>第7组 藏棱，角块越过棱块头顶转 180°</strong>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-bordered align-middle mb-0">
+                <tbody>
+                <tr class="text-center">
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l21.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l14.gif" alt=""></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="text-center">
+                    <td>
+                        🔶25) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U2' R') U' (R U R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">(R U2' R') U' (R U R')</a>
+                    </td>
+                    <td>
+                        🔶26) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=y' (R' U2 R) U (R' U' R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">y' (R' U2 R) U (R' U' R)</a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 第8组 -->
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <strong>第8组 藏棱，角块越过棱块头顶转 90°</strong>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-bordered align-middle mb-0">
+                <tbody>
+                <tr class="text-center">
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l37.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l28.gif" alt=""></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="text-center">
+                    <td>
+                        27) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U' R' U) d (R' U' R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">(R U' R' U) d (R' U' R)</a>
+                    </td>
+                    <td>
+                        28) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=y' (R' U R U') d' (R U R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">y' (R' U R U') d' (R U R')</a><br>
+                        或 <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=M U L F' L' U' M' &scheme=custom&stage=F2L&view=playback"
+                            target="_blank">M U L F' L' U' M'</a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 第9组 -->
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <strong>第9组 角棱一上一下且角块白色朝上</strong>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-bordered align-middle mb-0">
+                <tbody>
+                <tr class="text-center">
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l13.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l12.gif" alt=""></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="text-center">
+                    <td>
+                        29) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U' R') d (R' U R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">(R U' R') d (R' U R)</a>
+                    </td>
+                    <td>
+                        30) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U R' U')(R U R' U')(R U R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">(R U R' U')(R U R' U')(R U R')</a><br>
+                        或 <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(U R U' R')(U R U' R')(U R U' R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">(U R U' R')(U R U' R')(U R U' R')</a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 第10组 -->
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <strong>第10组 四种情况：角块在底层白色在侧面，棱块在顶层</strong>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-bordered align-middle mb-0">
+                <tbody>
+                <tr class="text-center">
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l7.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l10.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l11.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l6.gif" alt=""></td>
+                </tr>
+                <tr class="text-center">
+                    <td>
+                        31) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U' R' U)(R U' R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">(R U' R' U)(R U' R')</a>
+                    </td>
+                    <td>
+                        32) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=y'(R' U R) U' (R' U R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">y'(R' U R) U' (R' U R)</a><br>
+                        或 <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U R' U') (F R' F' R)&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">(R U R' U') (F R' F' R)</a>
+                    </td>
+                    <td>
+                        33) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U R' U')(R U R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">(R U R' U')(R U R')</a>
+                    </td>
+                    <td>
+                        34) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=y L' U' L U L' U' L&scheme=custom&stage=F2L&view=playback&setup=y"
+                            target="_blank">y L' U' L U L' U' L</a><br>
+                        或 <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=y' (R' U' R U)(R' U' R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">y' (R' U' R U)(R' U' R)</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-center">
+                        上面两种情况底层角块可见颜色（31 为红色，32 为绿色）与棱块顶色同色，处理方法类似。
+                    </td>
+                    <td colspan="2" class="text-center">
+                        上面两种情况底层角块可见颜色与棱块顶色异色，处理方法类似。
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 第11组 -->
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <strong>第11组 两种情况：角棱都在顶层且相邻，侧面同色，角块白色朝上</strong>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-bordered align-middle mb-0">
+                <tbody>
+                <tr class="text-center">
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l17.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l35_1.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l18.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l36_1.gif" alt=""></td>
+                </tr>
+                <tr class="text-center">
+                    <td>
+                        35) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U R') d (R' U R U') (R' U R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">(R U R') d (R' U R U') (R' U R)</a>
+                    </td>
+                    <td>
+                        35') <a
+                            href="http://www.rubik.com.cn/alg1/?type=alg&alg=y R' F R F' L' U' L&scheme=custom&stage=L6E&view=playback&setup=y"
+                            target="_blank">y R' F R F' L' U' L</a><br>
+                        <small>若如图有空槽，角棱对在后面，可用此简单公式。若目标槽在左前且右前为空，可不用 y 旋转。</small>
+                    </td>
+                    <td>
+                        36) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=U2 R2 U2 (R' U' R U') R2 &scheme=custom&stage=F2L&view=playback"
+                            target="_blank">U2 R2 U2 (R' U' R U') R2</a><br>
+                        或 <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U R' U') U' (R U R' U')(R U R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">(R U R' U') U' (R U R' U')(R U R')</a>
+                    </td>
+                    <td>
+                        36') <a
+                            href="http://www.rubik.com.cn/alg1/?type=alg&alg=(r U' r' F)(R U R') &scheme=custom&stage=ELS&view=playback"
+                            target="_blank">(r U' r' F)(R U R')</a><br>
+                        <small>若有空槽，角棱对在后面，把目标槽放右前，空槽放左前做此公式。</small>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 第12组 -->
+    <div class="card mb-5">
+        <div class="card-header bg-light">
+            <strong>第12组 五种情况：角棱对都在下面两层，并且在各自槽位里</strong>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-bordered align-middle mb-0">
+                <tbody>
+                <tr class="text-center">
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l8.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l9.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l4.gif" alt=""></td>
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l5.gif" alt=""></td>
+                </tr>
+                <tr class="text-center">
+                    <td>
+                        37) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U' R' U)(R U2' R') U (R U' R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">(R U' R' U)(R U2' R') U (R U' R')</a><br>
+                        <small>左前为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=u' (R U R' U')(R U R') u&scheme=custom&stage=ELS&view=playback"
+                           target="_blank">u' (R U R' U')(R U R') u</a><br>
+                        <small>右后为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=u (R U R' U')(R U R') u'&scheme=custom&stage=L6E&view=playback"
+                           target="_blank">u (R U R' U')(R U R') u'</a>
+                    </td>
+                    <td>
+                        38) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U' R' U) d (R' U' R U') (R' U R)&scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">(R U' R' U) d (R' U' R U') (R' U R)</a>
+                    </td>
+                    <td>
+                        39) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U' R') U' (R U R') U2 (R U' R')&scheme=custom&stage=F2L&view=playback"
+                            target="_blank">(R U' R') U' (R U R') U2 (R U' R')</a><br>
+                        <small>左前为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=u' (R U' R' U)(R U' R') u&scheme=custom&stage=ELS&view=playback"
+                           target="_blank">u' (R U' R' U)(R U' R') u</a><br>
+                        <small>右后为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=u (R U' R' U)(R U' R') u'&scheme=custom&stage=L6E&view=playback"
+                           target="_blank">u (R U' R' U)(R U' R') u'</a>
+                    </td>
+                    <td>
+                        40) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U' R' U') (R U' R')U (F' U' F) &scheme=custom&stage=F2L&view=playback"
+                            target="_blank">(R U' R' U') (R U' R') U (F' U' F)</a>
+                    </td>
+                </tr>
+                <tr class="text-center">
+                    <td><img src="http://www.rubik.com.cn/image/cfop/f2l1.gif" alt=""></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="text-center">
+                    <td>
+                        41) <a
+                            href="http://www.rubik.com.cn/alg/?type=alg&alg=(R U'U'R'U)2 y'(R'U'R)  &scheme=custom&stage=F2L&view=playback&setup=y-"
+                            target="_blank">(R U'U'R'U)² y'(R'U'R)</a><br>
+                        <small>左前为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=D (R' F R F')(R U' R') D'&scheme=custom&stage=ELS&view=playback"
+                           target="_blank">D (R' F R F')(R U' R') D'</a><br>
+                        <small>右后为空：</small><br>
+                        <a href="http://www.rubik.com.cn/alg/?type=alg&alg=D' (R' F R F')(R U' R') D&scheme=custom&stage=L6E&view=playback"
+                           target="_blank">D' (R' F R F')(R U' R') D</a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
