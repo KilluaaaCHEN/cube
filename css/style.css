@@ -9,6 +9,11 @@ table tr:has(> td:nth-child(4)) > td {
     width: 25%;
 }
 
+/* 4 个 td 的行：每个 25% */
+table tr:has(> td:nth-child(5)) > td {
+    width: 20%;
+}
+
 /* 3 个 td 的行：每个 33.33%（排除 4 个的情况）*/
 table tr:has(> td:nth-child(3)):not(:has(> td:nth-child(4))) > td {
     width: 33.3333%;
