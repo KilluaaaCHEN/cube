@@ -42,8 +42,8 @@ function createToggleButton() {
 
 // 收集所有公式链接
 function collectFormulas() {
-    const formulaLinks = document.querySelectorAll('a[href*="/alg/"], a[href*="alg?"]');
-
+    const formulaLinks = document.querySelectorAll('a[href*="alg"], a[href*="alg?"]');
+    console.log(formulaLinks)
     formulaLinks.forEach((link, index) => {
         const formulaText = link.textContent.trim();
         if (formulaText && !formulaText.includes('http')) {
