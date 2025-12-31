@@ -111,3 +111,69 @@ table a {
     opacity: 1;
     visibility: visible;
 }
+
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 右侧步骤导航整体 */
+.step-nav {
+    position: sticky;
+    top: 70px;                     /* 距离页面顶部的距离，避开上方 navbar */
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 12px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e5e5;
+    font-size: 14px;
+    max-height: calc(100vh - 100px);  /* 防止太高溢出 */
+    overflow-y: auto;
+}
+
+/* 导航标题 */
+.step-nav-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+    padding: 4px 8px 8px;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* 每一个步骤链接 */
+.step-nav-item {
+    display: block;
+    padding: 6px 10px;
+    margin-bottom: 2px;
+    border-radius: 4px;
+    color: #555;
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+}
+
+/* 悬停效果 */
+.step-nav-item:hover {
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+/* 当前步骤高亮（由 JS 控制添加 .active） */
+.step-nav-item.active {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+/* 小屏幕：右侧导航隐藏（只在 md 及以上显示） */
+@media (max-width: 767.98px) {
+    .step-nav {
+        position: static;
+        max-height: none;
+        margin-top: 15px;
+    }
+}
+.qsjf{
+    position: sticky;
+    top: 10px;
+    z-index: 99999;
+}
