@@ -47,7 +47,7 @@
 
 @media (min-width: 1200px) {
   .alg-wrapper {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -116,9 +116,11 @@
 
 .alg-name {
   margin: 0;
-  font-size: 16px;
   font-weight: 700;
   line-height: 1.2;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #737373;
+  font-size: 1em;
 }
 
 .alg-name span {
@@ -128,21 +130,24 @@
 
 .alg-sequence {
   /* 更接近原站：更紧凑、偏小的算法字体 */
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 13px;
   line-height: 1.3;
   word-break: break-word;
+  font-weight: 400;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 1.325em;
+  color: #000;
 }
 
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   .alg-sequence {
-    font-size: 12px;
+    font-size: 1.55em;
   }
 }
 
 .alg-sequence a {
-  color: #0d6efd;
   text-decoration: none;
+  color: #000;
+
 }
 
 .alg-sequence a:hover {
