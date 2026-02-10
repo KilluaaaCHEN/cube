@@ -11,6 +11,11 @@
     <script src="./js/script.js"></script>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <style>
+        img{
+            width:100px;
+        }
+    </style>
 </head>
 <body>
 <!-- 导航 -->
@@ -40,10 +45,8 @@
 
 <!-- 主体内容 -->
 <div class="container mb-5">
-
-    <div class="row">
         <!-- 左侧：教程内容 -->
-        <div class="col-md-9">
+        <div class="col-md-12">
             <!-- O -->
             <div class="card mb-4" id="step3">
                 <div class="card-header bg-light">
@@ -55,47 +58,85 @@
                         <tr class="text-center">
                             <td><img src="./img/cmll/o1.png" alt=""></td>
                             <td><img src="./img/cmll/o2.png" alt=""></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr class="text-center">
                             <td>
-                                1️⃣ <a href="https://alg.cubing.net/?alg=R_U_R-_U_R_U2_R-&stage=OLL&type=alg&setup=xxy" target="_blank">(R U R') U R U2 R'</a>
+                                1️⃣ <a href="https://alg.cubing.net/?alg=R_U_R-_U_R_U2_R-&stage=OLL&type=alg&setup=xxy" target="_blank">
+                                (R U2 R' U') R U2<br/>
+                                L' U R' U' L</a>
+                            </a>
                             </td>
                             <td>
-                                2️⃣ <a href="https://alg.cubing.net/?alg=R_U2_R-_U-_R_U-_R-&stage=OLL&type=alg&setup=xxy" target="_blank">(R U2 R' U') (R U' R')</a>
+                                2️⃣ <a href="https://alg.cubing.net/?alg=R_U2_R-_U-_R_U-_R-&stage=OLL&type=alg&setup=xxy" target="_blank">
+                                F (R U' R' U') (R U R') F'<br/>
+                                (R U R' U') (R' F R F')
+                            </a>
                             </td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
+            <div id="o" class="alg-section js-alg-filter" data-filter="o" data-puzzle="3x3x3" data-stage="CMLL" data-type="alg">
+                <div class="alg-section-meta">
+                    <h2 class="alg-section-title"><span>O</span></h2>
+                </div>
+                <div class="alg-wrapper">
+
+                    <div class="case-container">
+                        <div class="case-img">
+                            <a href="https://docs.google.com/document/d/1fdLy540owCeoSAPG79Dk7TF_pUDjR_mgr31DBkFq91g/edit">
+                                <img src="img/3x3/algorithm-3x3-CMLL-O-01-Adjacent-Swap.png" srcset="img/3x3/algorithm-3x3-CMLL-O-01-Adjacent-Swap.png 1x,
+                                                    img/3x3/algorithm-3x3-CMLL-O-01-Adjacent-Swap-@2x.png 2x" alt="3x3 Algorithm CMLL Case O 01 Adjacent Swap" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="alg-container">
+                            <div class="alg-item">
+                                <div class="alg-title">
+                                    <h3 class="alg-name">01 <span>Adjacent Swap</span></h3>
+                                </div>
+                                <div class="alg-sequence"><a class="js-alg-formatter" href="https://alg.cubing.net">(R U R') F' (R U R' U') R' F R2 U' R'</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-container">
+                        <div class="case-img">
+                            <a href="https://docs.google.com/document/d/1fdLy540owCeoSAPG79Dk7TF_pUDjR_mgr31DBkFq91g/edit">
+                                <img src="img/3x3/algorithm-3x3-CMLL-O-02-Diagonal-Swap.png" srcset="img/3x3/algorithm-3x3-CMLL-O-02-Diagonal-Swap.png 1x,
+                                                    img/3x3/algorithm-3x3-CMLL-O-02-Diagonal-Swap-@2x.png 2x" alt="3x3 Algorithm CMLL Case O 02 Diagonal Swap" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="alg-container">
+                            <div class="alg-item">
+                                <div class="alg-title">
+                                    <h3 class="alg-name">02 <span>Diagonal Swap</span></h3>
+                                </div>
+                                <div class="alg-sequence"><a class="js-alg-formatter" href="https://alg.cubing.net">F R U' R' U' R U R' F' R U R' U' (R' F R F')</a></div>
+                            </div>
+                        </div>
+                    </div>
 
 
-        <div style="height: 540px"></div>
-        </div>
+                    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-format="fluid"
+                         data-ad-layout-key="-g9+19-2e-oj+1hs"
+                         data-ad-client="ca-pub-5856604567267273"
+                         data-ad-slot="2374075846"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script> -->
 
-        <!-- 右侧：步骤导航 -->
-        <div class="col-md-3 d-none d-md-block">
-            <div class="text-center mb-4 qsjf">
-                <div class="image-hover-container">
-                    <h1 class="h3">
-                        桥式解法
-                    </h1>
-                    <img class="hover-image" src="./roux-img/overview.png" alt="桥式解法示意图">
                 </div>
             </div>
-            <nav id="step-nav" class="step-nav">
-                <div class="step-nav-title">步骤导航</div>
-                <a class="step-nav-item" href="#step1">第1步 左桥(FB)</a>
-                <a class="step-nav-item" href="#step2">第2步 右桥(SB)</a>
-                <a class="step-nav-item" href="#step3">第3步 CMLL - 角块</a>
-                <a class="step-nav-item" href="#step4">第4步 CMLL - 朝向</a>
-                <a class="step-nav-item" href="#step5-front">第5步 六棱块(6E) - 顶面全黄</a>
-                <a class="step-nav-item" href="#step5-back">第6步 六棱块(6E) - 蓝绿棱块</a>
-                <a class="step-nav-item" href="#step6">第7步 四中心块(4C)</a>
-            </nav>
         </div>
-    </div>
 </div>
 <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
