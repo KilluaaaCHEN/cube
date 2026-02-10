@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>桥式解法 | CMLL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="./js/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+<!-- 导航 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Rubik's Cube</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCFOP" aria-controls="navbarCFOP"
+                aria-expanded="false" aria-label="切换导航">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCFOP">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Roux</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="cmll.html">CMLL</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="f2l.html">F2L</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 主体内容 -->
+<div class="container mb-5">
+
+    <div class="row">
+        <!-- 左侧：教程内容 -->
+        <div class="col-md-9">
+            <!-- O -->
+            <div class="card mb-4" id="step3">
+                <div class="card-header bg-light">
+                    <strong>O Case</strong>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table table-bordered align-middle mb-0">
+                        <tbody>
+                        <tr class="text-center">
+                            <td><img src="./img/cmll/o1.png" alt=""></td>
+                            <td><img src="./img/cmll/o2.png" alt=""></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>
+                                1️⃣ <a href="https://alg.cubing.net/?alg=R_U_R-_U_R_U2_R-&stage=OLL&type=alg&setup=xxy" target="_blank">(R U R') U R U2 R'</a>
+                            </td>
+                            <td>
+                                2️⃣ <a href="https://alg.cubing.net/?alg=R_U2_R-_U-_R_U-_R-&stage=OLL&type=alg&setup=xxy" target="_blank">(R U2 R' U') (R U' R')</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+        <div style="height: 540px"></div>
+        </div>
+
+        <!-- 右侧：步骤导航 -->
+        <div class="col-md-3 d-none d-md-block">
+            <div class="text-center mb-4 qsjf">
+                <div class="image-hover-container">
+                    <h1 class="h3">
+                        桥式解法
+                    </h1>
+                    <img class="hover-image" src="./roux-img/overview.png" alt="桥式解法示意图">
+                </div>
+            </div>
+            <nav id="step-nav" class="step-nav">
+                <div class="step-nav-title">步骤导航</div>
+                <a class="step-nav-item" href="#step1">第1步 左桥(FB)</a>
+                <a class="step-nav-item" href="#step2">第2步 右桥(SB)</a>
+                <a class="step-nav-item" href="#step3">第3步 CMLL - 角块</a>
+                <a class="step-nav-item" href="#step4">第4步 CMLL - 朝向</a>
+                <a class="step-nav-item" href="#step5-front">第5步 六棱块(6E) - 顶面全黄</a>
+                <a class="step-nav-item" href="#step5-back">第6步 六棱块(6E) - 蓝绿棱块</a>
+                <a class="step-nav-item" href="#step6">第7步 四中心块(4C)</a>
+            </nav>
+        </div>
+    </div>
+</div>
+<script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

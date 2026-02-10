@@ -69,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 初始化：根据当前 hash 或第1项
     let currentIndex = getIndexByHash(window.location.hash || navLinks[0].getAttribute('href'));
-    activateByIndex(currentIndex);
 
     // 点击导航：高亮并更新 currentIndex
     navLinks.forEach((link, index) => {
