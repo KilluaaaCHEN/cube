@@ -1,0 +1,150 @@
+/*
+ * Extracted/minimal styles adapted from https://cubingcheatsheet.com/css/main-v3-min.css
+ * Used only for rendering CMLL O/H cases in cmll.html (alg-section / case-container / etc.)
+ */
+
+.alg-section {
+  margin: 0 0 22px;
+}
+
+.alg-section-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 14px 0 10px;
+}
+
+.alg-section-title {
+  margin: 0;
+  font-family: "Saira Condensed", "Open Sans Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.alg-section-title span {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: #111;
+  color: #fff;
+}
+
+.alg-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+/* 响应式：窄屏 1 列；中屏 2 列；宽屏 4 列（接近原站布局） */
+@media (min-width: 576px) {
+  .alg-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .alg-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.case-container {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 12px 12px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+
+  /* 让卡片本身占满网格单元宽度（对齐原站“满宽卡片”观感） */
+  width: 100%;
+  justify-self: stretch;
+}
+
+/* 关键：允许右侧文本列变窄/换行，不被 min-content 撑破导致“宽度不够/布局异常” */
+.alg-container {
+  min-width: 0;
+}
+
+.alg-sequence {
+  min-width: 0;
+}
+
+/* 屏幕更窄时，图片与公式上下排列，避免挤压 */
+@media (max-width: 420px) {
+  .case-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .alg-title {
+    justify-content: center;
+  }
+}
+
+.case-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-img img {
+  display: block;
+  width: 110px;
+  height: auto;
+}
+
+.alg-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.alg-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.alg-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.alg-name span {
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.alg-sequence {
+  /* 更接近原站：更紧凑、偏小的算法字体 */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+@media (min-width: 1200px) {
+  .alg-sequence {
+    font-size: 12px;
+  }
+}
+
+.alg-sequence a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.alg-sequence a:hover {
+  text-decoration: underline;
+}
