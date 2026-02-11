@@ -142,3 +142,12 @@ html{
 .alg-sequence .js-alg-formatter span {
   margin-right: 0;
 }
+
+.s90 {
+  transform: rotate(90deg);
+}
+
+
+.n90 {
+  transform: rotate(-90deg);
+}
